@@ -19,6 +19,7 @@ public class Project {
 	private String description;
 	
 	
+	
 	@OneToMany(mappedBy="project")
 	private List<Employee> employees;
 	

@@ -64,8 +64,6 @@
  -->
  
  
- 
- 
 <html xmlns:th="http://www.thymeleaf.org">
 	<head th:replace="layouts :: header"></head>
 	
@@ -88,9 +86,18 @@
 				    <option th:value="COMPLETED">Completed</option>
 				</select>
 		</div>
-			
-	     <input type="text" placeholder="Project stage" th:field="${project.stage}" 
-						class="mb-4 col-2 col-xs-4">
+		
+		<textarea type="text" placeholder="Enter project Description" th:field="${project.description}"></textarea>
+		
+		<div class="row">
+			<select  multiple="multiple" th:field="*{employees}">
+		                <option th:each="employee : ${allEmployees}"
+		                        th:value="${employee.employeeId}"
+		                        th:text="${employee.firstName}">
+		                 </option>
+		      </select>
+		</div>
+		
 		<button type="submit">submit</button>
 						
 		</form>
