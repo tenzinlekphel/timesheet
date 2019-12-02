@@ -90,15 +90,15 @@
 		<textarea type="text" placeholder="Enter project Description" th:field="${project.description}"></textarea>
 		
 		<div class="row">
-			<select  multiple="multiple" th:field="*{employees}">
-		                <option th:each="employee : ${allEmployees}"
-		                        th:value="${employee.employeeId}"
-		                        th:text="${employee.firstName}">
-		                 </option>
-		      </select>
+		<select th:field="*{employes}" multiple="multiple">
+		        <option th:each = "employee : ${allEmployees}"
+		                        th:value = "${employee.employeeId}"
+		                        th:text = "${employee.firstName}">
+		         </option>
+		 </select>
 		</div>
 		
-		<button type="submit">submit</button>
+		<button type="submit">Create a project</button>
 						
 		</form>
 		</div>

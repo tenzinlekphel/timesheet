@@ -36,8 +36,6 @@ public class Employee {
 	}
 	
 	
-	
-	
 	public Project getProject() {
 		return project;
 	}

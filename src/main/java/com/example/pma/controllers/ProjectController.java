@@ -37,10 +37,9 @@ public class ProjectController {
 	public String displayProjectForm(Model model) {
 		
 		Project aProject = new Project();
-		List<Employee> employees = empRepo.findAll();
-		
+		List<Employee> employes = empRepo.findAll();
 		model.addAttribute("project", aProject);
-		model.addAttribute("allEmployees", employees);
+		model.addAttribute("allEmployees", employes);
 		
 		return "projects/new-project";
 	}
